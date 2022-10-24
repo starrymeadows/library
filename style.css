@@ -95,12 +95,6 @@ button:hover {
     display: inline-block;
 }
 
-.read-status input {
-    float: right;
-    accent-color: var(--accent);
-    height: 18px;
-  }
-
 .delete {
     appearance: none;
     border: 1px solid var(--accent);
@@ -138,22 +132,73 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 250px;
+    width: 300px;
     padding: 2rem 3rem;
-  }
+}
 
-  .new-book ul {
+.close {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  vertical-align: middle;
+  background-color: var(--background);
+  border: 1px solid var(--shadow-color);
+  border-radius: 10px;
+  color: var(--accent);
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: ease 0.1s;
+}
+
+.close:hover {
+    background-color: var(--shadow-color);
+}
+
+.new-book ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 15px;
+}
+
+.new-book label[for=read-status] {
+    line-height: 20px;
+}
+
+.submit {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    background-color: var(--background);
+    border: 1px solid var(--shadow-color);
+    transition: ease 0.1s;
+}
+
+.submit:hover {
+    background-color: var(--shadow-color);
+}
+
+input[type=text],
+input[type=number] {
+    height: 30px;
+    border: 1px solid var(--shadow-color);
+    border-radius: 10px;
+}
+
+input[type=checkbox] {
+    float: right;
+    accent-color: var(--accent);
+    height: 18px;
   }
 
-.confirm {
-    display: none;
+  label {
+    font-size: 20px;
   }
 
-  .overlay {
+.overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -164,6 +209,6 @@ button:hover {
     z-index: 950;
   }
 
-  .active {
+.active {
     display: block;
   }

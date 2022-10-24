@@ -108,6 +108,7 @@ const addBtn = document.querySelector('.add');
 const addModal = document.querySelector('.new-book');
 const overlay = document.querySelector('.overlay');
 const submitBtn = document.querySelector('.submit');
+const closeBtn = document.querySelector('.close');
 const bookTitle = document.getElementById("book-title");
 const bookAuthor = document.getElementById("book-author");
 const bookPages = document.getElementById("book-pages");
@@ -115,6 +116,7 @@ const bookRead = document.getElementById("read-check");
 
 addBtn.addEventListener('click', () => openModal());
 
-overlay.addEventListener('click', () => closeModal())
+overlay.addEventListener('click', () => closeModal());
+closeBtn.addEventListener('click', () => closeModal());
 
 submitBtn.addEventListener('click', () => addBookToLibrary());
