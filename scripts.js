@@ -50,7 +50,7 @@ function createCard(book) {
     readCheck.setAttribute('id', 'read-status');
     readCheck.setAttribute('name', 'read-status');
     readCheck.checked = book.read;
-    readCheck.addEventListener('change', () => changeBookmark(newMark));
+    readCheck.addEventListener('change', () => changeBookmark(newMark, book));
     const readLabel = document.createElement('label');
     readLabel.setAttribute('for', 'read-status');
     readLabel.textContent = `Read?`;
@@ -98,8 +98,9 @@ function resetForm() {
     bookRead.checked = false;
 }
 
-function changeBookmark(newMark) {
+function changeBookmark(newMark, book) {
     newMark.classList.toggle("read");
+    book.read = !book.read;
 }
 
 const bookGrid = document.querySelector('.books');
