@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">library</h1>
+    </div>
+    <main class="content">
+        <button class="add">+new book</button>
+        <div class="books">
+            <div class="book">
+                <div class="card">
+                    <p>the test of an extremely long and obnoxious title</p>
+                    <p>By: test</p>
+                    <p>Page #: test</p>
+                    <div class="read-status">
+                        <input type="checkbox" id="read-status" name="read-status">
+                        <label for="read-status">Read?</label>
+                    </div>
+                    <button class="delete">remove</button>
+                </div>
+                <div class="bookmark read"></div>
+            </div>
+        </div>
+    </main>
+    <div class="new-book">
+        <form>
+            <ul>
+                <li>
+                    <input type="text" placeholder="Title" required maxlength="120" id="book-title">
+                </li>
+                <li>
+                    <input type="text" placeholder="Author" required maxlength="120" id="book-author">
+                </li>
+                <li>
+                    <label for="pages"></label>
+                    <input type="number" placeholder="Pages" required id="book-pages">
+                </li>
+                <li>
+                    <label for="read-status">have you read it?</label>
+                    <input type="checkbox" id="read-check" name="read-status">
+                </li>
+                <li>
+                    <button class="submit" type="button">Submit</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="confirm">
+
+    </div>
+    <div class="overlay"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>
